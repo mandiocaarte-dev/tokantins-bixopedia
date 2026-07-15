@@ -7,20 +7,21 @@
   <meta name="description" content="Catálogo de bixos do universo Tokantins.">
   <title>Tokantins Bixopédia</title>
   <link rel="manifest" href="manifest.webmanifest">
-  <link rel="icon" href="assets/to-logo.png">
+  <link rel="icon" href="assets/icons/icon-192.png">
   <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <main class="shell">
     <header class="topbar">
+      <button class="menu-button" id="menuButton" type="button" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <div class="brand">
         <img class="brand-logo" src="assets/tokantins-logo.png" alt="Tokantins: aventura entre bixos">
         <p class="kicker">Bixopédia</p>
-      </div>
-      <div class="top-actions">
-        <img class="mini-logo" src="assets/to-logo.png" alt="TO">
-        <div class="counter" id="counter">000</div>
       </div>
     </header>
 
@@ -33,9 +34,25 @@
         <span>Região</span>
         <select id="regionFilter"></select>
       </label>
+      <label class="filter">
+        <span>Tipo</span>
+        <select id="typeFilter"></select>
+      </label>
     </section>
 
-    <section class="stats" id="statsPanel" aria-label="Resumo da Bixopédia"></section>
+    <section class="category-tabs" id="categoryTabs" aria-label="Categorias da Bixopédia"></section>
+
+    <div class="drawer-backdrop" id="drawerBackdrop" hidden></div>
+
+    <aside class="side-drawer" id="sideDrawer" aria-label="Menu da Bixopédia" aria-hidden="true">
+      <div class="drawer-head">
+        <strong>Menu</strong>
+        <button class="drawer-close" id="drawerClose" type="button" aria-label="Fechar menu">×</button>
+      </div>
+      <section class="favorites-panel" id="favoritesPanel" aria-label="Favoritos da Bixopédia"></section>
+      <section class="sketches-panel" id="sketchesPanel" aria-label="Esboços da Bixopédia"></section>
+      <section class="stats" id="statsPanel" aria-label="Resumo da Bixopédia"></section>
+    </aside>
 
     <section class="layout">
       <aside class="list-panel">
@@ -57,6 +74,7 @@
   </template>
 
   <script src="data.js"></script>
+  <script src="sketches.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

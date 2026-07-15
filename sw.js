@@ -1,13 +1,14 @@
-const CACHE_NAME = "tokantins-bixopedia-v2";
+const CACHE_NAME = "tokantins-bixopedia-v20";
 const CORE_FILES = [
   "./",
   "./index.html",
   "./styles.css",
   "./app.js",
   "./data.js",
+  "./sketches.js",
   "./manifest.webmanifest",
-  "./assets/to-logo.png",
   "./assets/tokantins-logo.png",
+  "./assets/icons/to-icon-cropped.png",
   "./assets/icons/icon-192.png",
   "./assets/icons/icon-512.png",
   "./assets/icons/maskable-512.png",
