@@ -1,7 +1,8 @@
-const CACHE_NAME = "tokantins-bixopedia-v21";
+const CACHE_NAME = "tokantins-bixopedia-v22";
 const CORE_FILES = [
   "./",
   "./index.html",
+  "./reset.html",
   "./styles.css",
   "./app.js",
   "./data.js",
